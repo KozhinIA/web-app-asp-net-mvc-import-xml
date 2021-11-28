@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Библиотека</title>
+    @Styles.Render("~/Content/css")   
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Книги
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li><a class="dropdown-item" href="/Books">Книги</a></li>
+                                <li><a class="dropdown-item" href="/ImportXmlBooks">Импорт книг</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Authors" class="nav-link">Авторы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Genres" class="nav-link">Жанры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/CurrencyTypes" class="nav-link">Типы валют</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/Languages" class="nav-link">Языки</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
